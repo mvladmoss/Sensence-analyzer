@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['Test.py'],
-             pathex=['D:\\bsuir\\6sem\\language'],
+             pathex=['/home/ITRANSITION.CORP/p.saley/Sensence-analyzer'],
              binaries=[],
              datas=[],
              hiddenimports=[],
