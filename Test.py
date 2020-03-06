@@ -99,19 +99,21 @@ def defineRules(properties: set):
         for gramma_rule in value:
             if gramma_rule.issubset(properties):
                 result = result + key + ","
+    if result.__len__() == 28:
+        result = result + "не определено"
     return result
 
 
 window = Tk()
 window.title("Welcome to LikeGeeks app")
-window.geometry('650x500')
+window.geometry('1750x500')
 txt = Entry(window, width=60)
 txt.grid(column=1, row=0)
 resultTxt = Entry(window, width=50)
 
 
 def listToString(s):
-    str1 = " "
+    str1 = ","
     return str1.join(s)
 
 
@@ -129,8 +131,8 @@ def clicked():
     for word in result:
         listResult = listToString(word[1])
         str = "Слово \"" + word[0] + "\":  " + listResult
-        newTxt = Entry(window, width=100)
-        newTxt.grid(column=0, row=count)
+        newTxt = Entry(window, width=300)
+        newTxt.grid(column=3, row=count)
         count += 1
         newTxt.delete(0, END)
         newTxt.insert(0, str)
